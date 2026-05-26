@@ -62,4 +62,23 @@ public class Controller {
                 miModel.getGasolina(matricula)
         );
     }
+
+    public boolean avanzarCoche(String matricula, int metros) {
+
+        int total = miModel.avanzar(matricula, metros);
+
+        if (total == -1) {
+
+            System.out.println("No existe esa matrícula");
+
+            return false;
+        }
+
+        System.out.println(
+                matricula + " ha recorrido " +
+                        metros + " metros"
+        );
+
+        return true;
+    }
 }

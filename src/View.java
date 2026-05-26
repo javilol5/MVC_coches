@@ -14,6 +14,7 @@ public class View {
             System.out.println("1. Engadir Coche");
             System.out.println("2. Cambiar velocidad");
             System.out.println("3. Rellenar gasolina");
+            System.out.println("4. Avanzar");
             System.out.println("9. Salir");
             System.out.print("Selecciona unha opción: ");
 
@@ -54,6 +55,26 @@ public class View {
                         System.out.println("Se ha rellenado correctamente");}
                     else {System.out.println("Algo ha fallado");}
 
+                }
+
+                case 4 -> {
+
+                    System.out.println("Matricula: ");
+                    String matricula = new Scanner(System.in).next();
+
+                    System.out.println("Metros a avanzar: ");
+                    int metros = new Scanner(System.in).nextInt();
+
+                    boolean a = c.avanzarCoche(matricula, metros);
+
+                    if (a) {
+
+                        System.out.println("Movimiento realizado");
+
+                    } else {
+
+                        System.out.println("Algo ha fallado");
+                    }
                 }
 
                 case 9 -> {

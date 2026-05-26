@@ -72,5 +72,17 @@ public class Model {
         return c.gasolina;
     }
 
+    public int avanzar(String matricula, int metros) {
+
+        Coche c = getCoche(matricula);
+
+        if (c == null) {
+            return -1;
+        }
+
+        c.recorrido += metros;
+
+        return c.recorrido;
+    }
 
 }
