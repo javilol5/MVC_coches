@@ -49,7 +49,7 @@ public class View {
                     System.out.println("Matricula: ");
                     String matricula = new Scanner(System.in).next();
                     System.out.println("Gasolina a rellenar: ");
-                    int gasolina = new Scanner(System.in).nextInt();
+                    double gasolina = new Scanner(System.in).nextInt();
                     boolean a =c.newGasolina(matricula,gasolina);
                     if (a == true) {
                         System.out.println("Se ha rellenado correctamente");}

@@ -2,8 +2,9 @@ public class Coche {
     String matricula;
     String modelo;
     Integer velocidad;
-    Integer gasolina;
+    double gasolina;
     Integer recorrido;
+    Integer recorrible;
 
     public Coche(String modelo, String matricula) {
         this.modelo = modelo;
@@ -11,6 +12,5 @@ public class Coche {
         this.velocidad = 0;
         this.gasolina = 0;
         this.recorrido = 0;
-
     }
 }

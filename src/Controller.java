@@ -45,9 +45,9 @@ public class Controller {
         return hecho;
     }
 
-    public boolean newGasolina(String matricula, int gasolina){
+    public boolean newGasolina(String matricula, double gasolina){
 
-        int nuevaGasolina =
+        double nuevaGasolina =
                 miModel.cambiarGasolina(matricula, gasolina);
 
         if (nuevaGasolina == -1) {
@@ -70,6 +70,13 @@ public class Controller {
         if (total == -1) {
 
             System.out.println("No existe esa matrícula");
+
+            return false;
+        }
+
+        if (total == -2) {
+
+            System.out.println("Gasolina insuficiente");
 
             return false;
         }

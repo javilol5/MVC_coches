@@ -61,7 +61,7 @@ public class Model {
         return getCoche(matricula).velocidad;
     }
 
-    public int cambiarGasolina(String matricula, int gasolina) {
+    public double cambiarGasolina(String matricula, double gasolina) {
 
         Coche c = getCoche(matricula);
         if (c == null) {
@@ -80,6 +80,19 @@ public class Model {
             return -1;
         }
 
+        // gasolina necesaria
+        double litrosNecesarios = metros / 1570.0;
+
+        // comprobar gasolina
+        if (c.gasolina < litrosNecesarios) {
+
+            return -2;
+        }
+
+        // descontar gasolina
+        c.gasolina -= litrosNecesarios;
+
+        // avanzar
         c.recorrido += metros;
 
         return c.recorrido;
