@@ -4,7 +4,6 @@ public class Coche {
     Integer velocidad;
     double gasolina;
     Integer recorrido;
-    Integer recorrible;
 
     public Coche(String modelo, String matricula) {
         this.modelo = modelo;
