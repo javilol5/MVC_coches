@@ -34,6 +34,10 @@ public class Model {
         return aux;
     }
 
+    public Object getGasolina(String matricula) {
+         return getCoche(matricula).gasolina;
+    }
+
     /**
      * Cambia la velocidad de un coche
      * @param matricula
@@ -43,6 +47,7 @@ public class Model {
     public int cambiarVelocidad(String matricula, Integer v) {
         // busca el coche
         getCoche(matricula).velocidad = v;
+        System.out.println(" LOG esta haciendose");
         // retorna la nueva velocidad
         return getCoche(matricula).velocidad;
     }
@@ -55,4 +60,17 @@ public class Model {
     public int getVelocidad(String matricula) {
         return getCoche(matricula).velocidad;
     }
+
+    public int cambiarGasolina(String matricula, int gasolina) {
+
+        Coche c = getCoche(matricula);
+        if (c == null) {
+            return -1;
+        }
+
+        c.gasolina = gasolina;
+        return c.gasolina;
+    }
+
+
 }
